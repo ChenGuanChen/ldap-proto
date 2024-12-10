@@ -1,0 +1,30 @@
+dn: dc=konchin,dc=com
+dc: konchin
+objectClass: top
+objectClass: domain
+
+dn: cn=root,dc=konchin,dc=com
+cn: root
+objectClass: organizationalRole
+description: root account
+
+dn: ou=people,dc=konchin,dc=com
+ou: people
+objectClass: organizationalUnit
+
+dn: ou=group,dc=konchin,dc=com
+ou: group
+objectClass: organizationalUnit
+
+dn: ou=SUDOers,dc=konchin,dc=com
+ou: SUDOers
+objectclass: organizationalUnit
+
+dn: cn=defaults,ou=SUDOers,dc=konchin,dc=com
+objectClass: sudoRole
+objectClass: top
+cn: defaults
+sudoOption: env_reset
+sudoOption: mail_badpass
+sudoOption: secure_path=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+sudoorder: 1
